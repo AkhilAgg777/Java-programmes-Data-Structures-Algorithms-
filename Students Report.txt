@@ -1,0 +1,47 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+class Main {
+
+    public static void func(int[][] arr){
+
+
+int minIndex=0;
+int minSum=Integer.MAX_VALUE;
+for(int j=0;j<arr[0].length;j++){
+int sum=0;
+for(int i=0;i<arr.length;i++){
+sum+=arr[i][j];
+}
+if(sum<minSum){
+minSum=sum;
+minIndex=j;
+}
+
+}
+int[] res=new int[arr.length];
+for(int i=0;i<arr.length;i++){
+int val=0;
+for(int j=0;j<arr[0].length;j++){
+if(j==minIndex){
+continue;
+}else{
+val+=arr[i][j];
+}
+}
+res[i]=val;
+}
+
+
+       for(int i=0;i<res.length;i++){
+           System.out.print(res[i] + " ");
+           
+       } 
+}
+    public static void main(String[] args) {
+        int[][] arr={{75,76,65,87,87},{78,76,68,56,89},{67,87,78,77,65}};
+     	func(arr);
+    }
+}
