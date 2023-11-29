@@ -1,0 +1,31 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static String func(String input){
+		String res="";
+		char[] c=input.toCharArray();
+		Arrays.sort(c);
+		input=new String(c);
+		HashMap<Character,Integer> fmap=new HashMap<Character,Integer>();
+		for(int i=0;i<input.length();i++){
+			char ch=input.charAt(i);
+			fmap.put(ch,fmap.getOrDefault(ch,0)+1);
+		}
+		
+		for(Char c in fmap.keySet()){
+			res+=c+fmap.get(c);
+		}
+	} 
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		System.out.println(babdc);
+		
+	}
+}
